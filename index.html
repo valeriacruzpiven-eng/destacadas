@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valeria Cruz · Real Estate — Destacadas Mayo 2026</title>
+<meta name="description" content="Propiedades destacadas en alquiler y venta · Mayo 2026 · Valeria Cruz Real Estate">
+<meta property="og:title" content="Destacadas Mayo 2026 · Valeria Cruz Real Estate">
+<meta property="og:description" content="Propiedades seleccionadas del mes en Montevideo y Ciudad de la Costa">
+<meta property="og:image" content="assets/foto_vale.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F1EEE8;
+    --cream-light: #F8F6F2;
+    --sage: #7D9690;
+    --sage-deep: #5D7872;
+    --sage-soft: #B5C5BF;
+    --black: #1A1A1A;
+    --gray-soft: #B8B5B0;
+    --gray-medium: #888581;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: 'Playfair Display', serif; }
+  .mono-track {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-weight: 400;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    background: var(--black);
+    color: var(--cream);
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .topbar span { color: var(--sage-soft); }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--cream);
+    padding: 60px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-text { padding: 20px; }
+  .hero-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 11px;
+    color: var(--sage-deep);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--sage);
+    vertical-align: middle;
+    margin-right: 14px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 7vw, 84px);
+    line-height: 0.95;
+    color: var(--black);
+    margin-bottom: 18px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--sage-deep);
+    font-weight: 500;
+  }
+  .hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--gray-medium);
+    font-style: italic;
+    margin-bottom: 32px;
+    max-width: 440px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    max-width: 380px;
+  }
+  .hero-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gray-medium);
+  }
+  .hero-meta-row strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  .hero-photo {
+    position: relative;
+    height: 560px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--sage-soft);
+  }
+  .hero-photo::before {
+    content: "";
+    position: absolute;
+    inset: -20px -40px -40px 20px;
+    background: var(--sage);
+    border-radius: 4px;
+    z-index: 0;
+  }
+  .hero-photo img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 4px;
+  }
+  .hero-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 2;
+    background: var(--cream);
+    padding: 14px 20px;
+    border-radius: 2px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .hero-badge-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1;
+    color: var(--black);
+    font-weight: 500;
+  }
+  .hero-badge-role {
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  /* ===== SECTION DIVIDER ===== */
+  .section-divider {
+    text-align: center;
+    padding: 80px 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 11px;
+    color: var(--sage-deep);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    color: var(--black);
+    margin-bottom: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--sage-deep);
+  }
+  .section-line {
+    width: 60px;
+    height: 1px;
+    background: var(--sage);
+    margin: 24px auto 0;
+  }
+  .section-desc {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gray-medium);
+    font-size: 17px;
+    max-width: 480px;
+    margin: 16px auto 0;
+  }
+
+  /* ===== PROPERTY GRID ===== */
+  .properties-section {
+    padding: 0 20px 60px;
+  }
+  .properties-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+  .property-card {
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+  }
+  .property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  }
+  .property-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .property-cta-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(125,150,144,0.95) 100%);
+    color: var(--white);
+    padding: 60px 20px 18px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .property-card:hover .property-cta-overlay {
+    opacity: 1;
+  }
+
+  /* ===== CTA BLOCK ===== */
+  .cta-block {
+    background: var(--black);
+    color: var(--cream);
+    padding: 100px 24px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .cta-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--sage-soft);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+  }
+  .cta-title em { font-style: italic; color: var(--sage-soft); }
+  .cta-desc {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gray-soft);
+    max-width: 540px;
+    margin: 0 auto 36px;
+    font-size: 17px;
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--sage);
+    color: var(--white);
+    padding: 18px 38px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--sage-deep);
+    transform: translateY(-2px);
+  }
+  .cta-button svg { width: 18px; height: 18px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--cream);
+    color: var(--black);
+    padding: 60px 24px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .footer-tag {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-medium);
+  }
+  .footer-links a {
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--sage-deep); }
+  .footer-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--sage);
+    margin: 0 auto 24px;
+  }
+  .footer-fine {
+    font-size: 10px;
+    color: var(--gray-medium);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ===== WHATSAPP FAB ===== */
+  .wa-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+  }
+  .wa-fab:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+  }
+  .wa-fab svg { width: 32px; height: 32px; fill: white; }
+  .wa-fab::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    animation: pulse 2s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 860px) {
+    .hero { padding: 40px 20px 24px; }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .hero-text { padding: 0; order: 2; }
+    .hero-photo {
+      order: 1;
+      height: 460px;
+    }
+    .properties-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .section-divider { padding: 60px 20px 30px; }
+    .cta-block { padding: 70px 20px; }
+    .wa-fab { width: 56px; height: 56px; bottom: 20px; right: 20px; }
+    .wa-fab svg { width: 28px; height: 28px; }
+  }
+
+  @media (max-width: 480px) {
+    .topbar { font-size: 9px; letter-spacing: 0.2em; padding: 12px 16px; }
+    .hero-photo { height: 380px; }
+    .hero-eyebrow::before { width: 20px; margin-right: 10px; }
+    .footer-links { gap: 16px; font-size: 11px; }
+  }
+
+  /* fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .property-card:nth-child(1) { animation-delay: 0.05s; }
+  .property-card:nth-child(2) { animation-delay: 0.15s; }
+  .property-card:nth-child(3) { animation-delay: 0.25s; }
+  .property-card:nth-child(4) { animation-delay: 0.35s; }
+  .property-card:nth-child(5) { animation-delay: 0.45s; }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  Destacadas <span>·</span> Mayo 2026 <span>·</span> Montevideo & Ciudad de la Costa
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text fade-in">
+      <div class="hero-eyebrow">Selección del mes</div>
+      <h1 class="hero-title">Propiedades<br><em>Destacadas</em></h1>
+      <p class="hero-sub">Una selección curada de oportunidades en alquiler y venta para este mayo.</p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-row"><span>Mes</span><strong>Mayo 2026</strong></div>
+        <div class="hero-meta-row"><span>Total</span><strong>9 propiedades</strong></div>
+        <div class="hero-meta-row"><span>Zonas</span><strong>Montevideo & Costa</strong></div>
+      </div>
+    </div>
+
+    <div class="hero-photo fade-in">
+      <img src="assets/foto_vale.jpg" alt="Valeria Cruz" loading="eager">
+      <div class="hero-badge">
+        <div class="hero-badge-name">Valeria Cruz</div>
+        <div class="hero-badge-role">— Real Estate —</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALQUILER -->
+<div class="section-divider" id="alquiler">
+  <div class="section-eyebrow">Sección 01</div>
+  <h2 class="section-title">En <em>Alquiler</em></h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Cuatro propiedades seleccionadas para alquilar este mayo.</p>
+</div>
+
+<section class="properties-section">
+  <div class="properties-grid">
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Malv%C3%ADn%20Norte%20%28940041180-129%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/alq_malvin_norte.jpg" alt="Alquiler Malvín Norte — 54m² — $22.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Punta%20Carretas%20%28940041023-410%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/alq_punta_carretas.jpg" alt="Alquiler Punta Carretas — 79m² — $48.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Goes%20%28940041263-2%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/alq_goes.jpg" alt="Alquiler Goes con azotea — 69m² — $28.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Parque%20Batlle%20%28940041294-7%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/alq_parque_batlle.jpg" alt="Alquiler Parque Batlle — 55m² — $34.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+  </div>
+</section>
+
+<!-- VENTA -->
+<div class="section-divider" id="venta">
+  <div class="section-eyebrow">Sección 02</div>
+  <h2 class="section-title">En <em>Venta</em></h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Cinco oportunidades de inversión y vivienda en zonas premium.</p>
+</div>
+
+<section class="properties-section">
+  <div class="properties-grid">
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Pocitos%20USD%20465.000%20%28940041199-52%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/ven_pocitos_465.jpg" alt="Venta Pocitos con balcón — 185m² — USD 465.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Ciudad%20de%20la%20Costa%20%28940041163-33%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/ven_ciudad_costa.jpg" alt="Venta Ciudad de la Costa — 818m² — USD 390.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Pocitos%20USD%20290.000%20%28940041233-53%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/ven_pocitos_290.jpg" alt="Venta Pocitos — 71m² — USD 290.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Pocitos%20USD%20220.000%20%28940041176-47%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/ven_pocitos_220.jpg" alt="Venta Pocitos — 50m² — USD 220.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+    <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20me%20interesa%20la%20propiedad%20de%20Punta%20Gorda%20%28940041287-13%29" class="property-card fade-in" target="_blank" rel="noopener">
+      <img src="assets/ven_punta_gorda.jpg" alt="Venta Punta Gorda — 74m² — USD 190.000" loading="lazy">
+      <div class="property-cta-overlay">Consultar por WhatsApp →</div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="cta-eyebrow">Hablemos</div>
+  <h2 class="cta-title">¿Te interesa <em>alguna</em>?<br>Coordinemos una visita.</h2>
+  <p class="cta-desc">Respondo personalmente cada consulta. Escribime y armamos el horario que te quede mejor.</p>
+  <a href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20vi%20tus%20destacadas%20de%20mayo%20y%20me%20gustar%C3%ADa%20coordinar%20una%20visita" class="cta-button" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.875 2.909 4.366 2.909 7.02-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+    Escribir por WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Valeria Cruz</div>
+  <div class="footer-tag">— Real Estate —</div>
+  <div class="footer-links">
+    <a href="https://wa.me/59899632441" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://instagram.com/valeriacruz.realestate" target="_blank" rel="noopener">@valeriacruz.realestate</a>
+    <a href="mailto:vcruz@remaxunico.com">vcruz@remaxunico.com</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-fine">Asociada a RE/MAX Único · Montevideo, Uruguay</div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/59899632441?text=Hola%20Valeria%2C%20vi%20tus%20destacadas%20de%20mayo" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.875 2.909 4.366 2.909 7.02-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+</a>
+
+</body>
+</html>
